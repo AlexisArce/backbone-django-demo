@@ -1,0 +1,9 @@
+.DS_Store
+env
+src/ENV
+src/ENV2
+*.pyc
+static/*
+src/django.log
+production_settings.py
+media/*

@@ -1,0 +1,28 @@
+{% extends "base.html" %}
+
+{% block page-title %}
+{% if item_id %}<span class="icon-pencil" ></span> Edit {% else %}<span class="icon-plus"></span> Add {% endif %}
+{{ item_type }}{% endblock %}
+
+{% block page-content %}
+<div class="btn-group item-buttons">
+    <a href="{% url chronicle-index %}" class="btn btn-small">Note list</a>
+    {% if item_id %}
+        <a href="{% url chronicle-item item_type item_id %}" title="View" class="btn btn-small"><i class="icon-folder-open"></i> View</a>
+    {% endif %}
+</div>
+
+<form enctype="multipart/form-data" id="item-form-{{ item_type }}" action="{% if item_id %}{% url chronicle-item-edit item_type item_id %}{% else %}{% url chronicle-item-add item_type %}{% endif %}" method="post" class="row">
+    {% if next %}
+        <input type="hidden" name="next" value="{{ next }}" />
+    {% endif %}
+    <div id="item-form">
+{% csrf_token %}
+    {{ form.as_p }}
+    </div>
+    <div class="row span7 offset3">
+    <input type="submit" value="Save" class="btn" />
+    </div>
+</form>
+{% endblock %}
+

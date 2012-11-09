@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+    <head>
+        <meta charset="utf-8">
+        <!-- Causes validation errors  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">-->
+        <title>{% block title %}RPG{% endblock %}</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width">
+
+        <link rel="stylesheet/less" type="text/css" media="all" href="{{ STATIC_URL }}less/main.less" />
+        <script type="text/javascript" src="{{ STATIC_URL }}js/vendor/less-1.3.0.min.js"></script>
+        <style>
+            body {
+                padding-top: 60px;
+                padding-bottom: 40px;
+            }
+        </style>
+        <link rel="stylesheet" href="{{ STATIC_URL }}aloha/css/aloha.css">
+
+        <script src="{{ STATIC_URL }}js/vendor/modernizr-2.6.1-respond-1.1.0.min.js"></script>
+    </head>
+    <body>
+        <!--[if lt IE 7]>
+            <p class="chromeframe">You are using an outdated browser. <a href="http://browsehappy.com/">Upgrade your browser today</a> or <a href="http://www.google.com/chromeframe/?redirect=true">install Google Chrome Frame</a> to better experience this site.</p>
+        <![endif]-->
+
+        <!-- This code is taken from http://twitter.github.com/bootstrap/examples/hero.html -->
+        <div id="page">
+        <div class="row page-row">    
+            <div class="page-content span8 offset1">
+                <h2>{% block page-title %}{% endblock %}</h2>
+                {% block page-content %}{% endblock %}
+            </div>
+            
+        </div> <!-- /row -->
+    </div> <!-- /#page -->
+
+        <script type="text/javascript" src="{{ STATIC_URL }}js/vendor/jquery-1.8.0.min.js"></script>
+        <script type="text/javascript" src="{{ STATIC_URL }}aloha/lib/aloha-full.js" data-aloha-plugins="common/format,common/link,common/list"></script>
+        <script type="text/javascript" src="{{ STATIC_URL }}js/vendor/underscore.js"></script>
+        <script type="text/javascript" src="{{ STATIC_URL }}js/vendor/backbone.js"></script>
+
+        <script type="text/javascript" src="{{ STATIC_URL }}js/vendor/bootstrap.min.js"></script>
+        <script type="text/javascript" src="{{ STATIC_URL }}js/vendor/jquery.hoverIntent.minified.js"></script>
+        <script type="text/javascript" src="{{ STATIC_URL }}js/vendor/jquery.bootstrap-growl.min.js"></script>
+
+        <script type="text/javascript" src="{{ STATIC_URL }}js/main.js"></script>
+
+        <script type="text/javascript" src="{{ STATIC_URL }}js/backbone/fields.js"></script>
+        
+        <script type="text/javascript" src="{{ STATIC_URL }}js/backbone/models.js"></script>
+        <script type="text/javascript" src="{{ STATIC_URL }}js/backbone/views.js"></script>
+        <script type="text/javascript" src="{{ STATIC_URL }}js/backbone/templates.js"></script>
+        <script type="text/javascript" src="{{ STATIC_URL }}js/backbone/events.js"></script>
+        <script type="text/javascript" src="{{ STATIC_URL }}js/backbone/render.js"></script>
+    </body>
+</html>

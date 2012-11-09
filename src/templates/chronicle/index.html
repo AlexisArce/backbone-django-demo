@@ -1,0 +1,20 @@
+{% extends "base.html" %}
+
+
+{% block page-title %}Notes{% endblock %}
+
+{% block page-content %}
+        {% if notes %}
+            <ul>
+            {% for note in notes %}
+            <li>
+            <a href="{% url chronicle-item 'note' note.id %}">{{ note.title }}</a><br><a href="{% url chronicle-item-edit 'note' note.id %}">Old school edit</a></li>
+            </li>
+            {% endfor %}
+            </ul>
+        {% else %}
+            No notes
+        {% endif %}
+        <a href="{% url chronicle-item-add 'note' %}">Add note</a>
+{% endblock %}
+

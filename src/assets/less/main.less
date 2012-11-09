@@ -1,0 +1,229 @@
+@import 'bootstrap/bootstrap.less';
+@import 'bootstrap/responsive.less';
+@import 'datepicker.less';
+@import 'multiselect.less';
+
+[class^="icon-"] {
+    background-image: none !important;
+}
+
+.item .thumbnail {
+    position: relative;
+
+    height: 172px;
+    height: 72px;
+}
+
+.item span.icon {
+    position: absolute;
+
+    top: 2px;
+    right: 2px;
+/*  border: 2px solid black;
+    background-color: black;
+    border-radius: 14px;*/
+    display: block;
+/*    background-image: url('../img/glyphicons-halflings.png');*/
+    height: 14px;
+    width: 14px;
+  font-family: FontAwesome;
+  font-weight: normal;
+  font-style: normal;
+  display: inline-block;
+  text-decoration: inherit;
+}
+
+.item-icon {
+  font-family: FontAwesome;
+  font-weight: normal;
+  font-style: normal;
+  display: inline-block;
+  text-decoration: inherit;
+}
+
+h5 .item-icon, .related-item .item-icon {
+  margin-top: 2px;
+  padding-right: 4px;
+  float: left;
+}
+
+.item .icon-character:before, .item-icon-character:before {
+//    .icon-user
+    content: "\f007";
+}
+
+.item .icon-event:before, .item-icon-event:before {
+//    .icon-time
+    content: "\f017";
+}
+
+.item .icon-place:before, .item-icon-place:before {
+//    .icon-map-marker;
+    content: "\f041";
+}
+
+.item .icon-faction:before, .item-icon-faction:before {
+//    .icon-bookmark;
+    content: "\f02e";
+}
+
+.item .icon-session:before, .item-icon-session:before {
+//    .icon-calendar;
+    content: "\f073";
+}
+
+.item .icon-plotline:before, .item-icon-plotline:before {
+//    .icon-list;
+    content: "\f03a";
+}
+
+.item .icon-note:before, .item-icon-note:before {
+//    .icon-file;
+    content: "\f016";
+}
+
+.item .icon-sessionpoint:before, .item-icon-sessionpoint:before {
+//    .icon-flag;
+    content: "\f024";
+}
+
+.item .item-image {
+    background-color: #eaeaea;
+    display: block;
+    margin: 4px;
+    height: 48px;
+    display: none;
+}
+
+a:hover .item-image {
+    text-decoration: none;
+}
+
+.menu-text {
+    padding-left: 4px;    
+}
+
+.session-number {
+    display: block;
+    float: right;
+    height: 48px;
+
+    color: #000000;
+    font-weight: bold;
+    font-size: 40px;
+    text-align: center;
+    line-height: 48px;
+}
+
+.session-points-count {
+    display: block;
+    color: #999999;
+    font-size: 0.7em;
+}
+
+.thumbnail a:hover, a.thumbnail:hover {
+    text-decoration: none;
+}
+
+.sidebar .thumbnail {
+    background-color: #ffffff;
+}
+
+.edit-bar {
+  display: inline;
+}
+
+.outline {
+    outline: 2px solid #cccccc;
+    cursor: pointer;
+}
+
+td .item-icon {
+    margin: 0;
+    padding: 0;
+    position: relative;
+    top: 4px;
+    left: 4px;
+}
+
+.ms-container, .ms-selectable, .ms-selection {
+    background: none !important;
+}
+
+.ms-selectable ul, .ms-selection ul {
+    background-color: #ffffff;
+}
+
+.clear-both {
+    clear: both;
+}
+
+.edit-btn {
+    float: right;
+}
+
+.edit-delete-button {
+    margin-left: 8px;
+}
+
+div[data-type="boolean"][data-widget="label"] {
+/*    float: left;
+    margin-right: 4px;*/
+}
+
+.timestamp.updated {
+/*    float: left;
+    margin-right: 4px;*/
+}
+
+.item-buttons {
+    margin-bottom: 8px;
+}
+
+/* We'll see if this fucks up something else, but it unfucks added buttons next to inputs. */
+.input-append .add-on, .input-prepend .add-on {
+    height: auto !important;
+}
+
+#item-form {
+    input {
+        width: 50%;
+    }
+
+    textarea {
+        width: 75%;
+    }
+}
+
+#save-notify {
+    position: fixed;
+    top: 48px;
+    right: 16px;
+    z-index: 250;
+}
+
+.popover-field {
+    width: 256px;
+
+    input {
+        width: 210px;
+    }
+}
+
+.timeline-event {
+    margin-bottom: 16px;
+}
+
+.thumbnail-offset {
+    background-color: rgba(255,255,255,0.5);
+/*    background-position: 60px;*/
+    background-repeat: no-repeat;
+}
+
+.description-field {
+    padding-top: 16px;
+}
+
+.sidebar .nav.nav-list {
+    clear: both;
+}

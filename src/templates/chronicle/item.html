@@ -1,0 +1,26 @@
+{% extends "base.html" %}
+
+{% block title %}{{ item }}{% endblock %}
+
+{% block page-title %}
+<span class="model-view" data-model="note" data-view="ModelView" data-id="{{ item.id }}">
+    <span class="model-field" data-type="text" data-attribute="title" data-view-model="note" data-view-id="{{ item.id }}">
+        {{ item.title }}
+    </span>
+</span>
+{% endblock %}
+
+{% block page-content %}
+<div class="model-view item-note-view note-{{ item.id }}" data-model="note" data-view="ModelView" data-id="{{ item.id }}">
+<div class="btn-group item-buttons">
+    <a href="{% url chronicle-item-edit 'note' item.id %}?next={% url chronicle-item 'note' item.id %}" title="Edit" class="btn btn-small"><i class="icon-pencil"></i> Edit</a>
+</div>
+
+
+
+    {% if item.text %}
+    <div class="model-field" data-type="textarea" data-attribute="text" data-view-model="note" data-view-id="{{ item.id }}">{{ item.text|safe }}</div>
+    {% endif %}
+</div>
+{% endblock %}
+
